@@ -60,7 +60,7 @@ OBJECT Codeunit 50308 NAV Integration
   OBJECT-PROPERTIES
   {
     Date=01.07.26;
-    Time=[ 9:45:47];
+    Time=[ 9:51:31];
     Modified=Yes;
     Version List=SHM.DEVHUB;
   }
@@ -71,7 +71,10 @@ OBJECT Codeunit 50308 NAV Integration
             l_ErrorText@1101970001 : Text[1024];
           BEGIN
             // TEST MERGE GIT
-                                  // TEST MERGE GIT 2
+
+            // TEST MERGE GIT 2
+
+            // TEST MERGE GIT 3
           END;
 
   }
@@ -79,6 +82,7 @@ OBJECT Codeunit 50308 NAV Integration
   {
     VAR
       g_ULog@1101970000 : Record 21074917;
+      GitExported@1101970001 : TextConst 'RUS=Задача: "%1" успешно выгружена для GIT';
 
     PROCEDURE SetUserPermissions@1101970001();
     BEGIN
@@ -212,7 +216,6 @@ OBJECT Codeunit 50308 NAV Integration
       l_Object.RESET;
       l_Object.SETFILTER(l_Object."Version List", '%1', '*'+p_TaskID+'*');
       IF l_Object.FINDSET = FALSE THEN BEGIN
-        g_ULog.DirectSQLAddMessage('DBG', l_Object.GETFILTERS);
         pv_ErrorText := STRSUBSTNO('Объектов с филтром: "*%1*" не найдено.', p_TaskID);
         EXIT(FALSE);
       END;

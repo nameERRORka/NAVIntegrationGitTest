@@ -60,7 +60,7 @@ OBJECT Codeunit 50308 NAV Integration
   OBJECT-PROPERTIES
   {
     Date=01.07.26;
-    Time=[ 9:51:31];
+    Time=[ 9:55:36];
     Modified=Yes;
     Version List=SHM.DEVHUB;
   }
@@ -71,10 +71,9 @@ OBJECT Codeunit 50308 NAV Integration
             l_ErrorText@1101970001 : Text[1024];
           BEGIN
             // TEST MERGE GIT
-
             // TEST MERGE GIT 2
-
             // TEST MERGE GIT 3
+            // TEST MERGE GIT 4
           END;
 
   }
